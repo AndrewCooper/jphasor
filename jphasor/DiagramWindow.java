@@ -72,7 +72,7 @@ public class DiagramWindow extends JFrame {
 		centerContY.setLayout(new BoxLayout(centerContY,BoxLayout.Y_AXIS));
 
 		statusMessage.setText("Loading... phasor graph");
-		JLabel logoLabel = new JLabel(new ImageIcon(jphasor.jPhasor.class.getResource("images/jPhasorLogo.png")));
+		JLabel logoLabel = new JLabel(new ImageIcon(Utils.getImage(this,"/images/jPhasorLogo.png")));
 		phasorView = new PhasorView(new Dimension(500,500));
 		JButton aboutButton = new JButton("About jPhasor...");
 		aboutButton.addActionListener(new ActionListener() {

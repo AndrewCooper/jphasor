@@ -261,7 +261,7 @@ public class PowerPanel extends JPanel {
 
 	}
 
-	public void clear() {
+	public void reset() {
 		sField.setText("0");
 		pField.setText("0");
 		qField.setText("0");

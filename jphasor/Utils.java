@@ -19,6 +19,10 @@
 */
 package jphasor;
 
+import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.*;
+import java.net.URL;
 import java.io.File;
 
 public class Utils {
@@ -43,4 +47,16 @@ public class Utils {
         }
         return ext;
     }
+	public static Image getImage(Component o, String path) {
+		MediaTracker tracker = new MediaTracker(o);
+		URL imageURL = o.getClass().getResource(path);
+		Image img = Toolkit.getDefaultToolkit().getImage(imageURL);
+		tracker.addImage(img,0);
+		try {
+			tracker.waitForID(0);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return img;
+	}
 }

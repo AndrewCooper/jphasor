@@ -34,7 +34,7 @@ public class jPhasorSplash extends JWindow {
 		Border b2 = BorderFactory.createLoweredBevelBorder();
 		c.setBorder(BorderFactory.createCompoundBorder(b1,b2));
 		Insets bi = c.getInsets();
-		JLabel pic = new SplashLabel(getImage(this,"/images/jPhasorLogo.png"),"Loading");
+		JLabel pic = new SplashLabel(Utils.getImage(this,"/images/jPhasorLogo.png"),"Loading");
 		message = new MessageLabel("Loading... Splash Screen");
 		c.setBackground(Color.white);
 		message.setHorizontalTextPosition(JLabel.LEFT);
@@ -61,18 +61,6 @@ public class jPhasorSplash extends JWindow {
 		}
 		this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 3);
 		this.setVisible(true);
-	}
-	public static Image getImage(Component o, String path) {
-		MediaTracker tracker = new MediaTracker(o);
-		URL imageURL = jphasor.DiagramWindow.class.getResource(path);
-		Image img = Toolkit.getDefaultToolkit().getImage(imageURL);
-		tracker.addImage(img,0);
-		try {
-			tracker.waitForID(0);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return img;
 	}
 	public JLabel getMessage() {
 		return message;

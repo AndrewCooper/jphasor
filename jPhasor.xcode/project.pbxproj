@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		010FB80D00814DD77F000001 = {
+			fileRef = 10F9BF62FEEDA25E11DB9C8B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		01F12F4CFEC8CE2211DB9C8B = {
+			buildSettings = {
+			};
+			buildStyles = (
+				0E20B662001FAFA711DB9C8B,
+				0E20B663001FAFA711DB9C8B,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 01F12F4DFEC8CE2211DB9C8B;
+			productRefGroup = 01F12F4FFEC8CEF111DB9C8B;
+			projectDirPath = "";
+			targets = (
+				1601BCDBFEEE210811DB9C8B,
+			);
+		};
+		01F12F4DFEC8CE2211DB9C8B = {
+			children = (
+				C39C2ECD07C9D2B500A32962,
+				C39C2EDB07C9D2B600A32962,
+				C39C2ECE07C9D2B500A32962,
+				C39C2EDC07C9D2B600A32962,
+				C39C2F1F07C9D43A00A32962,
+				6AAAF050023EA31A0CC91562,
+				01F12F4FFEC8CEF111DB9C8B,
+			);
+			isa = PBXGroup;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		01F12F4FFEC8CEF111DB9C8B = {
+			children = (
+				06D05853FF24F2DB11DB9C8B,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//010
+//011
+//012
+//013
+//014
+//060
+//061
+//062
+//063
+//064
+		06D05853FF24F2DB11DB9C8B = {
+			explicitFileType = wrapper.application;
+			isa = PBXFileReference;
+			path = jPhasor.app;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//060
+//061
+//062
+//063
+//064
+//0E0
+//0E1
+//0E2
+//0E3
+//0E4
+		0E20B662001FAFA711DB9C8B = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		0E20B663001FAFA711DB9C8B = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+//0E0
+//0E1
+//0E2
+//0E3
+//0E4
+//100
+//101
+//102
+//103
+//104
+		10F9BF62FEEDA25E11DB9C8B = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			path = jPhasor.icns;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//100
+//101
+//102
+//103
+//104
+//160
+//161
+//162
+//163
+//164
+		1601BCDBFEEE210811DB9C8B = {
+			buildPhases = (
+				1601BCDCFEEE210811DB9C8B,
+				1601BCDEFEEE210811DB9C8B,
+				1601BCDFFEEE210811DB9C8B,
+				1601BCE2FEEE210811DB9C8B,
+				6A869E8001E69FA10CC91562,
+			);
+			buildSettings = {
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = jPhasor;
+			};
+			dependencies = (
+			);
+			isa = PBXApplicationTarget;
+			name = jPhasor;
+			productName = jPhasor;
+			productReference = 06D05853FF24F2DB11DB9C8B;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>jPhasor</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>CFBundleIconFile</key>
+	<string>jPhasor.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>jPhasor</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string></string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.1</string>
+	<key>Java</key>
+	<dict>
+		<key>ClassPath</key>
+		<array>
+			<string>$JAVAROOT/jPhasor.jar</string>
+		</array>
+		<key>JVMVersion</key>
+		<string>1.4+</string>
+		<key>MainClass</key>
+		<string>jphasor.jPhasor</string>
+		<key>Properties</key>
+		<dict>
+			<key>apple.laf.useScreenMenuBar</key>
+			<string>true</string>
+		</dict>
+		<key>WorkingDirectory</key>
+		<string>$APP_PACKAGE/Contents/Resources/Java</string>
+	</dict>
+	<key>NSJavaNeeded</key>
+	<string>YES</string>
+	<key>NSJavaPath</key>
+	<array>
+		<string>jPhasor.jar</string>
+	</array>
+	<key>NSJavaRoot</key>
+	<string>Contents/Resources/Java</string>
+</dict>
+</plist>
+";
+		};
+		1601BCDCFEEE210811DB9C8B = {
+			buildActionMask = 2147483647;
+			files = (
+				C39C2F2507C9D4D700A32962,
+				C39C2F2607C9D4D800A32962,
+				C39C2F2707C9D4D900A32962,
+				C39C2F2807C9D4E000A32962,
+				C39C2F2907C9D4E200A32962,
+				C39C2F2A07C9D4E400A32962,
+				C39C2F2B07C9D4E500A32962,
+				C39C2F2C07C9D4E600A32962,
+				C39C2F2D07C9D4E700A32962,
+				C39C2F2E07C9D4E800A32962,
+				C39C2F2F07C9D4EC00A32962,
+				C39C2F3007C9D4EC00A32962,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1601BCDEFEEE210811DB9C8B = {
+			buildActionMask = 2147483647;
+			files = (
+				C39C2F2107C9D43A00A32962,
+				C39C2F9607C9DDC800A32962,
+			);
+			isa = PBXJavaArchiveBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1601BCDFFEEE210811DB9C8B = {
+			buildActionMask = 2147483647;
+			files = (
+				010FB80D00814DD77F000001,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1601BCE2FEEE210811DB9C8B = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+//160
+//161
+//162
+//163
+//164
+//6A0
+//6A1
+//6A2
+//6A3
+//6A4
+		6A869E8001E69FA10CC91562 = {
+			buildActionMask = 8;
+			files = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#\n# This script copies alert strings into the application\n# so that if the application cannot be launched on an \n# older version of the operating system, the user gets a \n# localized error message.  \n#\n# The particular localizations copied into the application\n# are dependent upon the set of localizations installed on\n# the machine the application is built on.\n#\n\nif [ \"${TARGET_BUILD_DIR}\" = \"\" ]; \nthen\n    TARGET_BUILD_DIR=${BUILD_DIR}\nfi\n\nALERTSTRINGS=\"OldJavaAlert.strings\"\nAPPLAUNCHRESDIR=\"/System/Library/PrivateFrameworks/JavaApplicationLauncher.framework/Resources\";\nLSH=`/bin/ls $APPLAUNCHRESDIR | /usr/bin/grep lproj`;\nRESOURCEDIR=\"${TARGET_BUILD_DIR}/$TARGET_NAME.app/Contents/Resources\"\n\nfor COPYDIR in $LSH\ndo\n        /bin/mkdir -p \"$RESOURCEDIR/$COPYDIR\"\n        /bin/cp \"$APPLAUNCHRESDIR/$COPYDIR/$ALERTSTRINGS\" \"$RESOURCEDIR/$COPYDIR\"\ndone";
+		};
+		6AAAF050023EA31A0CC91562 = {
+			children = (
+				10F9BF62FEEDA25E11DB9C8B,
+				6AAAF056023EA5D30CC91562,
+			);
+			isa = PBXGroup;
+			path = resources;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6AAAF056023EA5D30CC91562 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			path = jPhasorstrings.properties;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//6A0
+//6A1
+//6A2
+//6A3
+//6A4
+//C30
+//C31
+//C32
+//C33
+//C34
+		C39C2ECD07C9D2B500A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = build.xml;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2ECE07C9D2B500A32962 = {
+			children = (
+				C39C2ECF07C9D2B500A32962,
+				C39C2ED007C9D2B500A32962,
+				C39C2ED107C9D2B500A32962,
+				C39C2ED207C9D2B500A32962,
+				C39C2ED307C9D2B500A32962,
+				C39C2ED407C9D2B500A32962,
+				C39C2ED507C9D2B500A32962,
+				C39C2ED607C9D2B600A32962,
+				C39C2ED707C9D2B600A32962,
+				C39C2ED807C9D2B600A32962,
+				C39C2ED907C9D2B600A32962,
+				C39C2EDA07C9D2B600A32962,
+			);
+			isa = PBXGroup;
+			name = jphasor;
+			path = javasrc/jphasor;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2ECF07C9D2B500A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = AboutDialog.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2ED007C9D2B500A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = DiagramWindow.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2ED107C9D2B500A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = ImageFilter.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2ED207C9D2B500A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = jPhasor.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2ED307C9D2B500A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = jPhasorSplash.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2ED407C9D2B500A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Phasor.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2ED507C9D2B500A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = PhasorDialog.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2ED607C9D2B600A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = PhasorPanel.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2ED707C9D2B600A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = PhasorView.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2ED807C9D2B600A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = PowerPanel.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2ED907C9D2B600A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SidePanel.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2EDA07C9D2B600A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Utils.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2EDB07C9D2B600A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			path = LICENSE;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2EDC07C9D2B600A32962 = {
+			children = (
+				C39C2EDD07C9D2B600A32962,
+			);
+			isa = PBXGroup;
+			path = ReadMe;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2EDD07C9D2B600A32962 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			path = "ReadMe-jphasor.tex";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2F1F07C9D43A00A32962 = {
+			children = (
+				C39C2F2007C9D43A00A32962,
+			);
+			isa = PBXGroup;
+			path = images;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2F2007C9D43A00A32962 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			path = jPhasorLogo.png;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C39C2F2107C9D43A00A32962 = {
+			fileRef = C39C2F2007C9D43A00A32962;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = images;
+			};
+		};
+		C39C2F2507C9D4D700A32962 = {
+			fileRef = C39C2ECF07C9D2B500A32962;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C39C2F2607C9D4D800A32962 = {
+			fileRef = C39C2ED007C9D2B500A32962;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C39C2F2707C9D4D900A32962 = {
+			fileRef = C39C2ED107C9D2B500A32962;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C39C2F2807C9D4E000A32962 = {
+			fileRef = C39C2ED207C9D2B500A32962;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C39C2F2907C9D4E200A32962 = {
+			fileRef = C39C2ED307C9D2B500A32962;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C39C2F2A07C9D4E400A32962 = {
+			fileRef = C39C2ED407C9D2B500A32962;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C39C2F2B07C9D4E500A32962 = {
+			fileRef = C39C2ED507C9D2B500A32962;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C39C2F2C07C9D4E600A32962 = {
+			fileRef = C39C2ED607C9D2B600A32962;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C39C2F2D07C9D4E700A32962 = {
+			fileRef = C39C2ED707C9D2B600A32962;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C39C2F2E07C9D4E800A32962 = {
+			fileRef = C39C2ED807C9D2B600A32962;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C39C2F2F07C9D4EC00A32962 = {
+			fileRef = C39C2ED907C9D2B600A32962;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C39C2F3007C9D4EC00A32962 = {
+			fileRef = C39C2EDA07C9D2B600A32962;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C39C2F9607C9DDC800A32962 = {
+			fileRef = C39C2EDB07C9D2B600A32962;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = "";
+			};
+		};
+	};
+	rootObject = 01F12F4CFEC8CE2211DB9C8B;
+}

@@ -31,13 +31,13 @@ public class SidePanel extends JPanel{
 	private JTabbedPane modeTabPane = new JTabbedPane();
 	private PhasorPanel phasorTab;
 	private PowerPanel powerTab;
-	private JButton clearButton = new JButton();
+	private JButton resetButton = new JButton();
 
 	public SidePanel(PhasorView pv) {
 		try {
 			phasorView = pv;
 			jbInit();
-			clear();
+			reset();
 			phasorView.setSource(this);
 			redraw();
 		}
@@ -54,11 +54,11 @@ public class SidePanel extends JPanel{
 		powerTab = new PowerPanel();
 		powerTab.setParent(this);
 
-		clearButton.setHorizontalTextPosition(SwingConstants.CENTER);
-		clearButton.setText("Clear");
-		clearButton.addActionListener(new java.awt.event.ActionListener() {
+		resetButton.setHorizontalTextPosition(SwingConstants.CENTER);
+		resetButton.setText("Clear");
+		resetButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				clear();
+				reset();
 			}
 		});
 
@@ -72,12 +72,12 @@ public class SidePanel extends JPanel{
 		});
 
 		this.add(modeTabPane, null);
-		this.add(clearButton, null);
+		this.add(resetButton, null);
 	}
 
-	public void clear() {
-		phasorTab.clear();
-		powerTab.clear();
+	public void reset() {
+		phasorTab.reset();
+		powerTab.reset();
 	}
 
 	public void redraw() {

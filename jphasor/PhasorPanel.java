@@ -88,6 +88,7 @@ public class PhasorPanel extends JPanel {
 		vUnitsBox.addItem("mV");
 		vUnitsBox.addItem("V");
 		vUnitsBox.addItem("kV");
+		vUnitsBox.setEnabled(false);
 
 		vScrollPane.getViewport().add(vList, null);
 		vList.setModel(voltageList);
@@ -146,6 +147,7 @@ public class PhasorPanel extends JPanel {
 		iUnitsBox.addItem("mA");
 		iUnitsBox.addItem("A");
 		iUnitsBox.addItem("kA");
+		iUnitsBox.setEnabled(false);
 
 		iScrollPane.getViewport().add(iList, null);
 		iList.setModel(currentList);
@@ -203,7 +205,6 @@ public class PhasorPanel extends JPanel {
 
 		maxVLabel.setText("Max V");
 		maxVLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-//		maxV.setNextFocusableComponent(maxI);
 		maxV.setInputVerifier(nv);
 		maxV.addFocusListener(new java.awt.event.FocusAdapter() {
 			public void focusGained(FocusEvent e) {
@@ -219,7 +220,6 @@ public class PhasorPanel extends JPanel {
 
 		maxILabel.setText("Max I");
 		maxILabel.setHorizontalAlignment(SwingConstants.RIGHT);
-//		maxI.setNextFocusableComponent(magDivs);
 		maxI.setInputVerifier(nv);
 		maxI.addFocusListener(new java.awt.event.FocusAdapter() {
 			public void focusGained(FocusEvent e) {
@@ -235,7 +235,6 @@ public class PhasorPanel extends JPanel {
 
 		magDivsLabel.setText("Mag Divs");
 		magDivsLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-//		magDivs.setNextFocusableComponent(phaseDivs);
 		magDivs.setInputVerifier(nv);
 		magDivs.addFocusListener(new java.awt.event.FocusAdapter() {
 			public void focusGained(FocusEvent e) {
@@ -248,7 +247,6 @@ public class PhasorPanel extends JPanel {
 
 		phaseDivsLabel.setText("Phase Divs");
 		phaseDivsLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-//		phaseDivs.setNextFocusableComponent(maxV);
 		phaseDivs.setInputVerifier(nv);
 		phaseDivs.addFocusListener(new java.awt.event.FocusAdapter() {
 			public void focusGained(FocusEvent e) {
@@ -292,7 +290,7 @@ public class PhasorPanel extends JPanel {
 		this.add(phaseDivs, new GridBagConstraints(1, 10, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 12));
 	}
 
-	public void clear() {
+	public void reset() {
 		vUnitsBox.setSelectedIndex(1);
 		maxV.setText("10");
 		vMaxUnitsBox.setSelectedIndex(1);

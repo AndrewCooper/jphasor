@@ -64,7 +64,7 @@ public class AboutDialog extends JDialog {
 		this.setModal(true);
 		this.setResizable(false);
 		try {
-			InputStream licenseStream = jphasor.jPhasor.class.getResourceAsStream("LICENSE");
+			InputStream licenseStream = this.getClass().getResourceAsStream("/LICENSE");
 			licenseTextArea.read(new InputStreamReader(licenseStream),null);
 		} catch (Exception e) {
 			System.err.println("No LICENSE file found");
@@ -79,7 +79,7 @@ public class AboutDialog extends JDialog {
 		copyrightLabel.setText("Copyright © 2003 Andrew Cooper, HK Creations under the GNU GPL (see below)");
 		jScrollPane1.getViewport().add(licenseTextArea, null);
 
-		logoLabel.setIcon(new ImageIcon(jphasor.jPhasor.class.getResource("images/jPhasorLogo.png")));
+		logoLabel.setIcon(new ImageIcon(Utils.getImage(this,"/images/jPhasorLogo.png")));
 		viewpane.add(logoLabel, new GridBagConstraints(0, 0, 2, 1, 0.0, 0.0,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 10, 0), 0, 0));
 		viewpane.add(jScrollPane1, new GridBagConstraints(0, 3, 2, 1, 0.0, 0.0,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
 		viewpane.add(creatorLabel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(2, 5, 2, 5), 0, 0));
