@@ -1,0 +1,65 @@
+
+<project name="jPhasor" default="compile" basedir="..">
+	<description>
+		simple example build file
+	</description>
+	<!-- set global properties for this build -->
+	<property name="src" location="jphasor/src"/>
+	<property name="images" location="/jphasor/images"/>
+	<property name="doc" location="doc"/>
+	<property name="jars" location="jars"/>
+	<property name="build" location="build"/>
+	<property name="releases"  location="releases"/>
+
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp/>
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}"/>
+	</target>
+
+	<target name="compile" depends="init" description="compile the source " >
+		<!-- Compile the java code from ${src} into ${build} -->
+		<javac srcdir="${src}" destdir="${build}"/>
+		<copy todir="${build}/${images}">
+			<fileset dir="${src}/${images}"/>
+		</copy>
+		<copy tofile="${build}/jphasor/LICENSE" file="${src}/jphasor/LICENSE"/>
+	</target>
+
+	<target name="docs" depends="compile" description="generate the javadoc files">
+		<!-- Run javadoc for the most up-to-date documentation -->
+		<mkdir dir="${doc}"/>
+		<javadoc sourcepath="${src}" packagenames="jphasor"  destdir="${doc}" />
+	</target>
+
+	<target name="jarpackage" depends="compile" description="jar file packaging">
+		<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+		<mkdir dir="${jars}"/>
+		<jar jarfile="${jars}/jPhasor-${DSTAMP}.jar" basedir="${build}">
+ 			<manifest>
+				<attribute name="Built-By" value="${user.name}"/>
+				<attribute name="Main-Class" value="jphasor.jPhasor"/>
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="dist" depends="compile,docs,jarpackage" description="generate the distribution" >
+		<!-- Create the distribution directory -->
+		<mkdir dir="${releases}"/>
+		<zip destfile="${releases}/jPhasor-${DSTAMP}.zip" >
+			<zipfileset dir="${doc}" prefix="apidocs"/>
+			<zipfileset dir="${src}" includes="ReadMe.pdf"/>
+			<zipfileset dir="${jars}" includes="jPhasor-${DSTAMP}.jar"/>
+			<zipfileset dir="${src}/jphasor" includes="LICENSE"/>
+			<zipfileset dir="${src}" prefix="src" excludes="CVS/**"/>
+		</zip>
+	</target>
+
+	<target name="clean" description="clean up" >
+		<!-- Delete the ${build} and ${dist} directory trees -->
+		<delete dir="${build}"/>
+		<delete dir="${doc}"/>
+		<delete dir="${jars}"/>
+	</target>
+</project>
