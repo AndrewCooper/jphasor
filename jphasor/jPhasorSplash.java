@@ -34,7 +34,7 @@ public class jPhasorSplash extends JWindow {
 		Border b2 = BorderFactory.createLoweredBevelBorder();
 		c.setBorder(BorderFactory.createCompoundBorder(b1,b2));
 		Insets bi = c.getInsets();
-		JLabel pic = new SplashLabel(getImage(this,"images/jPhasorLogo.png"),"Loading");
+		JLabel pic = new SplashLabel(getImage(this,"/images/jPhasorLogo.png"),"Loading");
 		message = new MessageLabel("Loading... Splash Screen");
 		c.setBackground(Color.white);
 		message.setHorizontalTextPosition(JLabel.LEFT);

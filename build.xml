@@ -1,11 +1,11 @@
 
-<project name="jPhasor" default="compile" basedir="..">
+<project name="jPhasor" default="compile" basedir=".">
 	<description>
 		simple example build file
 	</description>
 	<!-- set global properties for this build -->
-	<property name="src" location="jphasor/src"/>
-	<property name="images" location="/jphasor/images"/>
+	<property name="src" location="javasrc"/>
+	<property name="images" location="images"/>
 	<property name="doc" location="doc"/>
 	<property name="jars" location="jars"/>
 	<property name="build" location="build"/>
@@ -14,26 +14,29 @@
 	<target name="init">
 		<!-- Create the time stamp -->
 		<tstamp/>
+	</target>
+
+	<target name="compile" depends="init" description="compile the source" >
 		<!-- Create the build directory structure used by compile -->
 		<mkdir dir="${build}"/>
-	</target>
 
-	<target name="compile" depends="init" description="compile the source " >
 		<!-- Compile the java code from ${src} into ${build} -->
 		<javac srcdir="${src}" destdir="${build}"/>
-		<copy todir="${build}/${images}">
-			<fileset dir="${src}/${images}"/>
+
+		<!-- Copy images and license into build directory -->
+		<copy todir="${build}/images">
+			<fileset dir="${images}"/>
 		</copy>
-		<copy tofile="${build}/jphasor/LICENSE" file="${src}/jphasor/LICENSE"/>
+		<copy tofile="${build}/LICENSE" file="LICENSE"/>
 	</target>
 
-	<target name="docs" depends="compile" description="generate the javadoc files">
+	<target name="docs" depends="init" description="generate the javadoc files">
 		<!-- Run javadoc for the most up-to-date documentation -->
 		<mkdir dir="${doc}"/>
-		<javadoc sourcepath="${src}" packagenames="jphasor"  destdir="${doc}" />
+		<javadoc sourcepath="${src}" packagenames="jphasor.*"  destdir="${doc}" />
 	</target>
 
-	<target name="jarpackage" depends="compile" description="jar file packaging">
+	<target name="jar" depends="compile" description="jar file packaging">
 		<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
 		<mkdir dir="${jars}"/>
 		<jar jarfile="${jars}/jPhasor-${DSTAMP}.jar" basedir="${build}">
@@ -44,7 +47,7 @@
 		</jar>
 	</target>
 
-	<target name="dist" depends="compile,docs,jarpackage" description="generate the distribution" >
+	<target name="dist" depends="compile,docs,jar" description="generate the distribution" >
 		<!-- Create the distribution directory -->
 		<mkdir dir="${releases}"/>
 		<zip destfile="${releases}/jPhasor-${DSTAMP}.zip" >
